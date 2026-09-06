@@ -29,7 +29,7 @@ Program ini menerapkan beberapa konsep dasar Java dan PBO, yaitu class, object, 
 ## Dokumentasi Program
 ### 1. Tampilan Menu Utama
 
-![alt text](?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20133612.png?raw=true)
 
 **Penjelasan:**  
 - Tampilan menu utama merupakan tampilan awal ketika program dijalankan. Pada menu ini terdapat beberapa pilihan yang dapat digunakan untuk mengelola data pesanan, yaitu Tambah Pesanan, Lihat Pesanan, Ubah Pesanan, Hapus Pesanan, dan Keluar. Pengguna dapat memilih menu dengan memasukkan nomor sesuai pilihan yang tersedia.
