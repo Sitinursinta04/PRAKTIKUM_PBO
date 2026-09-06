@@ -36,36 +36,30 @@ Program ini menerapkan beberapa konsep dasar Java dan PBO, yaitu class, object, 
 
 ### 2. Proses Tambah Pesanan
 
-![alt text](<img width="758" height="215" alt="Screenshot 2026-09-06 133752" src="https://github.com/user-attachments/assets/81c4e1b5-9839-4afe-b1b7-86d14ddd11b1" />
-?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20133752.png?raw=true)
 
 **Penjelasan:**  
 - Pada menu Tambah Pesanan, pengguna diminta memasukkan data pesanan yang terdiri dari ID pesanan, nama pelanggan, nama barang, negara asal, harga, dan jumlah barang. Data yang telah dimasukkan kemudian dibuat menjadi object `PesananJastip` dan disimpan ke dalam `ArrayList`.
 
 ### 3. Tampilan Data Pesanan
 
-![alt text](<img width="811" height="255" alt="Screenshot 2026-09-06 133806" src="https://github.com/user-attachments/assets/b6694db7-cd5a-475b-bf26-159a0eb21b3b" />
-?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20133806.png?raw=true)
 
 **Penjelasan:**  
 - Menu Lihat Pesanan digunakan untuk menampilkan seluruh data pesanan yang telah tersimpan. Data ditampilkan menggunakan perulangan sehingga semua pesanan yang ada di dalam ArrayList dapat ditampilkan. Sistem juga menampilkan total harga dari setiap pesanan berdasarkan harga barang dikalikan dengan jumlah barang.
 
 ### 4. Proses Ubah Pesanan
 
-![alt text](<img width="750" height="232" alt="Screenshot 2026-09-06 133956" src="https://github.com/user-attachments/assets/67e034b6-0dc8-40b4-865a-fb2ea1cc8c56" />
-?raw=true)
-![alt text](<img width="652" height="270" alt="Screenshot 2026-09-06 134008" src="https://github.com/user-attachments/assets/036b4777-8af2-4754-9697-4b1d63461171" />
-?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20133956.png?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20134008.png?raw=true)
 
 **Penjelasan:**  
 - Pada menu Ubah Pesanan, pengguna memasukkan ID pesanan yang ingin diubah. Sistem akan mencari pesanan berdasarkan ID tersebut. Jika pesanan ditemukan, pengguna dapat memasukkan data baru dan sistem akan memperbarui data pesanan menggunakan setter.
 
 ### 5. Proses Hapus Pesanan
 
-![alt text](<img width="601" height="268" alt="Screenshot 2026-09-06 134030" src="https://github.com/user-attachments/assets/160a28c6-973a-4c36-92dc-970a794af2bf" />
-?raw=true)
-![alt text](<img width="777" height="217" alt="Screenshot 2026-09-06 134040" src="https://github.com/user-attachments/assets/96063a9e-00c8-494e-a1b8-32afae604267" />
-?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20134030.png?raw=true)
+![alt text](https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-06%20134040.png?raw=true)
 
 **Penjelasan:**  
 - Menu Hapus Pesanan digunakan untuk menghapus data pesanan yang sudah tersimpan. Pengguna memasukkan ID pesanan yang ingin dihapus, kemudian sistem akan mencari ID tersebut. Jika pesanan ditemukan, data akan dihapus dari ArrayList dan sistem menampilkan pesan bahwa pesanan berhasil dihapus.
