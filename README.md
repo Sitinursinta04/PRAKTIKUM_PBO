@@ -4,6 +4,7 @@
 Sistem Jasa Titip Belanja Luar Negeri merupakan program sederhana berbasis Java yang dibuat untuk membantu mengelola data pesanan jasa titip barang dari luar negeri. Program ini dibuat sebagai penerapan dari konsep Pemrograman Berorientasi Objek (PBO) yang telah dipelajari. Pengguna dapat memasukkan data pesanan berupa ID pesanan, nama pelanggan, nama barang, negara asal, harga, dan jumlah barang.
 Program ini memiliki fitur CRUD (Create, Read, Update, Delete) yang memungkinkan pengguna untuk menambahkan, melihat, mengubah, dan menghapus data pesanan. Data pesanan disimpan menggunakan ArrayList sehingga dapat menampung beberapa data pesanan selama program sedang dijalankan. Program juga menggunakan beberapa class yang memiliki fungsi berbeda agar program lebih terstruktur.
 
+
 ## Alur Program
 Ketika program dijalankan, sistem akan menampilkan menu utama yang terdiri dari Tambah Pesanan, Lihat Pesanan, Ubah Pesanan, Hapus Pesanan, dan Keluar. Pengguna dapat memilih menu dengan memasukkan angka sesuai pilihan yang tersedia. Setelah pengguna melakukan suatu proses, sistem akan kembali menampilkan menu utama sehingga pengguna dapat melakukan proses lainnya.
 - Pada menu **Tambah Pesanan**, pengguna diminta memasukkan data pesanan seperti ID pesanan, nama pelanggan, nama barang, negara asal, harga, dan jumlah barang. Data yang telah dimasukkan kemudian digunakan untuk membuat object dari class `PesananJastip` dan disimpan ke dalam ArrayList melalui class `KelolaPesanan`.
