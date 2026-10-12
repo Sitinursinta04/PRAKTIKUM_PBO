@@ -484,7 +484,7 @@ Menampilkan menu utama sistem setelah program berhasil dijalankan.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/Screenshot%202026-09-19%20211755.png" width="100%">
     </td>
   </tr>
 </table>
@@ -498,7 +498,7 @@ Menampilkan data pesanan yang berasal dari database. Data dapat langsung muncul 
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-12%20235100.png" width="100%">
     </td>
   </tr>
 </table>
@@ -512,7 +512,15 @@ Menampilkan proses ketika pengguna menambahkan data pesanan baru melalui program
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20000605.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20000628.png" width="100%">
     </td>
   </tr>
 </table>
@@ -526,7 +534,15 @@ Menampilkan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20001127.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20001158.png" width="100%">
     </td>
   </tr>
 </table>
@@ -540,7 +556,23 @@ Menampilkan hasil penghapusan data pesanan berdasarkan ID.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20002128.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20002137.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20002152.png" width="100%">
     </td>
   </tr>
 </table>
@@ -554,7 +586,15 @@ Menampilkan proses perubahan status pesanan melalui sistem.
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20001513.png" width="100%">
+    </td>
+  </tr>
+</table>
+
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20001530.png" width="100%">
     </td>
   </tr>
 </table>
@@ -568,7 +608,7 @@ Menampilkan hasil penerapan Hibernate ORM, khususnya proses pengambilan data mel
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20001753.png" width="100%">
     </td>
   </tr>
 </table>
