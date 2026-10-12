@@ -53,35 +53,7 @@ Pengembangan Mini Project 4 dilakukan untuk:
 Struktur package dipisahkan berdasarkan tanggung jawabnya agar kode lebih terorganisir.
 
 ```text
-SistemJastip_Minpro4
-├── Config
-│   ├── DatabaseConnection.java
-│   └── HibernateUtil.java
-├── Controller
-│   └── PesananController.java
-├── DAO
-│   ├── PesananDAO.java
-│   ├── PesananDAOImpl.java
-│   └── PelangganHibernateDAO.java
-├── Model
-│   ├── BatchJastip.java
-│   ├── Barang.java
-│   ├── BisaDivalidasi.java
-│   ├── JastipElektronik.java
-│   ├── JastipFashion.java
-│   ├── JastipSkincare.java
-│   ├── Pelanggan.java
-│   ├── Pembayaran.java
-│   └── PesananJastip.java
-├── View
-│   ├── BatchView.java
-│   ├── MenuView.java
-│   ├── PesananView.java
-│   └── ValidasiInput.java
-├── database
-│   └── sistem_jastip.sql
-└── Main
-    └── SistemJastip_Minpro4.java
+
 ```
 
 `Model` menangani representasi data dan konsep OOP, `View` menangani interaksi dengan pengguna, `Controller` mengatur jalannya proses, sedangkan `DAO` menangani akses data ke database. Package `Config` digunakan untuk menangani konfigurasi koneksi JDBC dan Hibernate.
