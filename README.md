@@ -20,7 +20,7 @@
 
 Project ini merupakan lanjutan dari **Mini Project 3**. Pada Mini Project 4, sistem dikembangkan agar dapat terhubung dengan database MySQL menggunakan **JDBC, PreparedStatement, dan DAO**. Dengan adanya database, data pesanan tidak hanya tersimpan selama program berjalan, tetapi dapat disimpan secara permanen dan digunakan kembali ketika aplikasi dijalankan.
 
-Sebagai nilai tambah, project ini juga menerapkan **Hibernate ORM**. JDBC tetap digunakan sebagai mekanisme utama pengelolaan data sesuai ketentuan Mini Project 4, sedangkan Hibernate digunakan untuk memperkenalkan pendekatan ORM dalam menghubungkan object Java dengan tabel database.
+Sebagai nilai tambah, project ini juga menerapkan **Hibernate ORM**. JDBC tetap digunakan sebagai mekanisme utama pengelolaan data sesuai ketentuan Mini Project 4, sedangkan Hibernate digunakan sebagai implementasi tambahan untuk memperkenalkan pendekatan ORM dalam menghubungkan object Java dengan tabel database.
 
 ---
 
@@ -50,9 +50,41 @@ Pengembangan Mini Project 4 dilakukan untuk:
   </tr>
 </table>
 
+Struktur package dipisahkan berdasarkan tanggung jawabnya agar kode lebih terorganisir.
+
+```text
+SistemJastip_Minpro4
+├── Config
+│   ├── DatabaseConnection.java
+│   └── HibernateUtil.java
+├── Controller
+│   └── PesananController.java
+├── DAO
+│   ├── PesananDAO.java
+│   ├── PesananDAOImpl.java
+│   └── PelangganHibernateDAO.java
+├── Model
+│   ├── BatchJastip.java
+│   ├── Barang.java
+│   ├── BisaDivalidasi.java
+│   ├── JastipElektronik.java
+│   ├── JastipFashion.java
+│   ├── JastipSkincare.java
+│   ├── Pelanggan.java
+│   ├── Pembayaran.java
+│   └── PesananJastip.java
+├── View
+│   ├── BatchView.java
+│   ├── MenuView.java
+│   ├── PesananView.java
+│   └── ValidasiInput.java
+├── database
+│   └── sistem_jastip.sql
+└── Main
+    └── SistemJastip_Minpro4.java
 ```
 
-Struktur package dipisahkan berdasarkan tanggung jawabnya agar kode lebih terorganisir. `Model` menangani representasi data dan konsep OOP, `View` menangani interaksi dengan pengguna, `Controller` mengatur jalannya proses, sedangkan `DAO` menangani akses data ke database.
+`Model` menangani representasi data dan konsep OOP, `View` menangani interaksi dengan pengguna, `Controller` mengatur jalannya proses, sedangkan `DAO` menangani akses data ke database. Package `Config` digunakan untuk menangani konfigurasi koneksi JDBC dan Hibernate.
 
 Pemisahan tersebut digunakan agar setiap bagian program memiliki tanggung jawab yang jelas. Dengan struktur seperti ini, perubahan pada proses database tidak harus langsung mengubah bagian tampilan maupun logika utama program.
 
@@ -102,6 +134,7 @@ public void setNamaPelanggan(String namaPelanggan) {
     this.namaPelanggan = namaPelanggan;
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -125,6 +158,7 @@ public abstract class PesananJastip {
     ...
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -158,7 +192,7 @@ Inheritance digunakan agar atribut dan perilaku yang bersifat umum tidak perlu d
 
 Pada project ini, polymorphism diterapkan melalui hubungan antara `PesananJastip` dengan class turunannya:
 
-```java
+```text
 JastipFashion
 JastipSkincare
 JastipElektronik
@@ -172,6 +206,7 @@ public String getJenisPesanan() {
     return "Jastip Fashion";
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -293,6 +328,7 @@ Koneksi database terdapat pada:
 ```text
 Config/DatabaseConnection.java
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -311,6 +347,7 @@ private static final String USER = "root";
 
 private static final String PASSWORD = "";
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -324,6 +361,7 @@ Koneksi dibuat menggunakan:
 ```java
 DriverManager.getConnection(URL, USER, PASSWORD);
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -351,6 +389,7 @@ ps.setString(1, idPesanan);
 
 ps.executeUpdate();
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -378,12 +417,13 @@ DAO/PesananDAO.java
 dengan operasi utama:
 
 ```java
-List<PesananJastip> getAllPesanan()
-boolean tambahPesanan(PesananJastip pesanan)
-boolean ubahPesanan(PesananJastip pesanan)
-boolean hapusPesanan(String idPesanan)
-boolean ubahStatusPesanan(String idPesanan, String statusBaru)
+List<PesananJastip> getAllPesanan();
+boolean tambahPesanan(PesananJastip pesanan);
+boolean ubahPesanan(PesananJastip pesanan);
+boolean hapusPesanan(String idPesanan);
+boolean ubahStatusPesanan(String idPesanan, String statusBaru);
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -475,7 +515,7 @@ Controller tidak menjalankan query SQL secara langsung karena proses tersebut me
 
 # 🖥️ Dokumentasi Output Program
 
-Bagian ini berisi screenshot hasil program setelah seluruh fitur dijalankan. Dokumentasi output digunakan sebagai bukti visual bahwa fitur yang dikembangkan dapat berjalan dan terhubung dengan database.
+Bagian ini berisi screenshot hasil program setelah fitur-fitur utama dijalankan. Dokumentasi output digunakan sebagai bukti visual bahwa fitur yang dikembangkan dapat berjalan dan terhubung dengan database.
 
 ## 1. Tampilan Menu Utama
 
@@ -537,7 +577,7 @@ Menampilkan proses ketika pengguna menambahkan data pesanan baru melalui program
 
 ## 4. Mengubah Data Pesanan
 
-Menampilkan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
+Menampilkan proses dan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
 
 <table border="1" bordercolor="black">
   <tr>
@@ -559,7 +599,7 @@ Menampilkan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
 
 ## 5. Menghapus Data Pesanan
 
-Menampilkan hasil penghapusan data pesanan berdasarkan ID.
+Menampilkan proses dan hasil penghapusan data pesanan berdasarkan ID.
 
 <table border="1" bordercolor="black">
   <tr>
@@ -589,7 +629,7 @@ Menampilkan hasil penghapusan data pesanan berdasarkan ID.
 
 ## 6. Mengubah Status Pesanan
 
-Menampilkan proses perubahan status pesanan melalui sistem.
+Menampilkan proses dan hasil perubahan status pesanan melalui sistem.
 
 <table border="1" bordercolor="black">
   <tr>
@@ -623,9 +663,9 @@ Menampilkan hasil penerapan Hibernate ORM, khususnya proses pengambilan data mel
 
 ---
 
-## 8. Keluar 
+## 9. Keluar dari Program
 
-Menampilkan kondisi database setelah proses CRUD dilakukan untuk memastikan perubahan dari program tersimpan pada database.
+Menampilkan proses ketika pengguna memilih menu `9` untuk keluar dari sistem. Setelah memilih menu tersebut, program menghentikan proses dan menampilkan pesan bahwa aplikasi telah selesai digunakan.
 
 <table border="1" bordercolor="black">
   <tr>
@@ -767,6 +807,7 @@ public class Pelanggan {
     private String nomorTelepon;
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -801,6 +842,7 @@ try (Session session =
             .getResultList();
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
