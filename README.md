@@ -623,14 +623,14 @@ Menampilkan hasil penerapan Hibernate ORM, khususnya proses pengambilan data mel
 
 ---
 
-## 8. Kondisi Database
+## 8. Keluar 
 
 Menampilkan kondisi database setelah proses CRUD dilakukan untuk memastikan perubahan dari program tersimpan pada database.
 
 <table border="1" bordercolor="black">
   <tr>
     <td>
-      <img src="" width="100%">
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20005130.png" width="100%">
     </td>
   </tr>
 </table>
