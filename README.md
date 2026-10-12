@@ -52,8 +52,6 @@ Pengembangan Mini Project 4 dilakukan untuk:
 
 Struktur package dipisahkan berdasarkan tanggung jawabnya agar kode lebih terorganisir.
 
-```text
-
 ```
 
 `Model` menangani representasi data dan konsep OOP, `View` menangani interaksi dengan pengguna, `Controller` mengatur jalannya proses, sedangkan `DAO` menangani akses data ke database. Package `Config` digunakan untuk menangani konfigurasi koneksi JDBC dan Hibernate.
