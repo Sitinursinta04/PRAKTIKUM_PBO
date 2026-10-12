@@ -1,70 +1,116 @@
-# Mini Project 4 — Sistem Jasa Titip Luar Negeri
+# 🌏 Sistem Jasa Titip Luar Negeri
 
-## 1. Identitas Project
-
-- **Nama Project:** Sistem Jasa Titip Luar Negeri
-- **Mata Kuliah:** Pemrograman Berorientasi Objek (PBO)
-- **Mini Project:** 4
-- **Bahasa Pemrograman:** Java
-- **Database:** MySQL
-- **Build Tool:** Maven
-- **IDE:** NetBeans
-- **Repository:** `Minpro-4-SistemJastip`
+> **Mini Project 4 — Pemrograman Berorientasi Objek (PBO)**  
+> Pengembangan lanjutan dari **Mini Project 3** dengan integrasi database menggunakan **JDBC, PreparedStatement, DAO**, serta **Hibernate ORM sebagai nilai tambah**.
 
 ---
 
-## 2. Deskripsi Project
+## 👤 Identitas Project
 
-Sistem Jasa Titip Luar Negeri merupakan aplikasi berbasis Java yang digunakan untuk membantu proses pengelolaan pesanan jasa titip dari luar negeri.
-
-Pada Mini Project 4, program dikembangkan dari Mini Project 3 dengan menambahkan integrasi database menggunakan **JDBC, PreparedStatement, dan DAO**. Data yang sebelumnya dikelola melalui program sekarang dapat disimpan dan diambil langsung dari database MySQL.
-
-Selain JDBC, project ini juga menerapkan **Hibernate ORM sebagai nilai tambah**. Hibernate digunakan untuk melakukan pemetaan beberapa class Java menjadi entity yang terhubung dengan tabel database.
-
-Pengembangan ini membuat sistem tidak hanya menerapkan konsep PBO, tetapi juga menggabungkan konsep PBO dengan pengelolaan database menggunakan pendekatan JDBC dan ORM.
+| Informasi | Keterangan |
+|---|---|
+| **Nama Project** | Sistem Jasa Titip Luar Negeri |
+| **Mini Project** | 4 |
+| **Mata Kuliah** | Pemrograman Berorientasi Objek (PBO) |
+| **Bahasa** | Java |
+| **Database** | MySQL |
+| **Build Tool** | Maven |
+| **IDE** | NetBeans |
+| **Database Access** | JDBC + DAO |
+| **Value-Add** | Hibernate ORM |
 
 ---
 
-## 3. Tujuan Pengembangan
+# 📖 1. Tentang Project
 
-Pengembangan Mini Project 4 bertujuan untuk:
+**Sistem Jasa Titip Luar Negeri** merupakan aplikasi berbasis Java yang digunakan untuk mengelola proses pemesanan jasa titip barang dari luar negeri.
 
+Project ini merupakan pengembangan dari **Mini Project 3**. Pada Mini Project sebelumnya, sistem telah menerapkan berbagai konsep Pemrograman Berorientasi Objek seperti **encapsulation, inheritance, abstraction, polymorphism, interface, validasi, dan pengelompokan class berdasarkan tanggung jawabnya**.
+
+Pada Mini Project 4, pengembangan difokuskan pada integrasi program dengan **database MySQL**. Data yang sebelumnya dikelola oleh program kemudian dikembangkan agar dapat disimpan secara permanen di database.
+
+Integrasi tersebut dilakukan menggunakan:
+
+- **JDBC** untuk menghubungkan Java dengan MySQL.
+- **PreparedStatement** untuk menjalankan query dengan parameter.
+- **DAO (Data Access Object)** untuk memisahkan proses akses database dari bagian program lainnya.
+- **CRUD** untuk mengelola data pesanan.
+- **Dummy data melalui file SQL** agar data dapat langsung ditampilkan ketika program dijalankan.
+
+Sebagai nilai tambah, project ini juga menerapkan **Hibernate ORM**. Penerapan Hibernate digunakan untuk memahami pendekatan lain dalam menghubungkan object Java dengan tabel database melalui konsep **Object Relational Mapping**.
+
+Dengan demikian, Mini Project 4 tidak hanya melanjutkan fitur dari Mini Project 3, tetapi juga memperlihatkan bagaimana konsep PBO dapat dikembangkan menjadi aplikasi yang sudah terhubung dengan database.
+
+---
+
+# 🎯 2. Tujuan Pengembangan
+
+Pengembangan Mini Project 4 dilakukan dengan beberapa tujuan utama:
+
+- Mengembangkan program Mini Project 3 agar dapat menyimpan data secara permanen.
 - Menghubungkan aplikasi Java dengan database MySQL.
-- Menerapkan JDBC menggunakan `PreparedStatement`.
-- Menerapkan pola DAO untuk memisahkan proses akses database dari bagian program lainnya.
-- Membuat fitur CRUD yang terhubung dengan database.
+- Menerapkan JDBC sebagai mekanisme utama akses database.
+- Menerapkan `PreparedStatement` dalam menjalankan query.
+- Menerapkan pola DAO agar akses database tidak bercampur dengan logika program.
+- Mengimplementasikan operasi CRUD pada data pesanan.
 - Menyediakan dummy data awal melalui file `.sql`.
-- Mempertahankan konsep PBO yang sudah diterapkan pada Mini Project 3.
+- Mempertahankan konsep PBO yang telah diterapkan pada Mini Project 3.
 - Menerapkan Hibernate ORM sebagai nilai tambah.
 - Memahami perbedaan pendekatan akses database menggunakan JDBC dan ORM.
-- Membuat struktur program yang lebih terorganisir dan mudah dikembangkan.
+- Membuat program yang lebih terstruktur dan lebih dekat dengan kebutuhan aplikasi nyata.
 
 ---
 
-## 4. Fitur Sistem
+# ✨ 3. Fitur Sistem
 
-Sistem memiliki beberapa fitur utama:
+Sistem Jasa Titip Luar Negeri memiliki beberapa fitur utama:
 
-- Tambah pesanan jasa titip.
-- Menampilkan data pesanan.
+### 📦 Pengelolaan Pesanan
+
+- Menambahkan pesanan.
+- Menampilkan pesanan.
 - Mengubah data pesanan.
 - Menghapus pesanan.
-- Menampilkan struk pesanan.
 - Mengubah status pesanan.
+- Menampilkan struk pesanan.
 - Menampilkan ringkasan pesanan.
-- Mengelola batch jasa titip.
+
+### 🧳 Pengelolaan Batch
+
+- Menampilkan informasi batch jasa titip.
+- Mengelola informasi perjalanan atau batch jasa titip.
+
+### 🔐 Validasi
+
 - Validasi input pengguna.
-- Penyimpanan data ke database MySQL.
-- Pembacaan data dari database menggunakan JDBC.
-- CRUD menggunakan DAO.
-- Pemetaan entity menggunakan Hibernate ORM.
+- Validasi detail pesanan berdasarkan jenis barang.
+- Validasi agar data yang dimasukkan sesuai dengan kebutuhan sistem.
+
+### 🗄️ Database
+
+- Penyimpanan data pelanggan.
+- Penyimpanan data barang.
+- Penyimpanan data pembayaran.
+- Penyimpanan data batch.
+- Penyimpanan data pesanan.
+- Penyimpanan detail berdasarkan jenis pesanan.
+- Penyimpanan riwayat status.
+
+### 🚀 Nilai Tambah
+
+- Hibernate ORM.
+- Entity mapping.
+- Hibernate Session.
+- HQL.
+- DAO berbasis Hibernate.
 
 ---
 
-## 5. Struktur Project
+# 🧩 4. Struktur Project
 
 ```text
 SistemJastip_Minpro4
+│
 ├── Controller
 │   └── PesananController.java
 │
@@ -93,60 +139,58 @@ SistemJastip_Minpro4
 │   ├── DatabaseConnection.java
 │   └── HibernateUtil.java
 │
-└── Main
-    └── SistemJastip_Minpro4.java
-
-database
-└── sistem_jastip.sql
+├── Main
+│   └── SistemJastip_Minpro4.java
+│
+└── database
+    └── sistem_jastip.sql
 ```
 
-Struktur tersebut digunakan agar setiap bagian program memiliki tanggung jawab yang jelas. Model menangani data dan aturan objek, View menangani tampilan serta input, Controller mengatur proses sistem, DAO menangani akses database, sedangkan Config menangani konfigurasi koneksi dan Hibernate.
+Struktur tersebut dibuat untuk memisahkan tanggung jawab setiap bagian program.
+
+| Package | Peran |
+|---|---|
+| `Model` | Menyimpan data dan aturan objek |
+| `View` | Mengatur tampilan dan input pengguna |
+| `Controller` | Mengatur jalannya proses sistem |
+| `DAO` | Menangani akses data |
+| `Config` | Menangani konfigurasi database dan Hibernate |
+| `Main` | Menjadi titik awal program |
+| `database` | Menyimpan file SQL database |
+
+Pemisahan tersebut membuat kode lebih mudah dibaca, diuji, dan dikembangkan karena setiap bagian tidak menangani terlalu banyak tanggung jawab sekaligus.
 
 ---
 
-## 6. Penerapan MVC
+# 🏗️ 5. Arsitektur Program
 
-Project menggunakan pembagian **Model, View, dan Controller**.
+Project menggunakan pendekatan **Model–View–Controller (MVC)** yang kemudian dilengkapi dengan DAO untuk kebutuhan database.
 
-### Model
+Secara sederhana, tanggung jawabnya adalah:
 
-Package `Model` berisi class yang merepresentasikan data dan objek dalam sistem, seperti:
+**View → Controller → Model / DAO → Database**
 
-- `PesananJastip`
-- `JastipFashion`
-- `JastipSkincare`
-- `JastipElektronik`
-- `Barang`
-- `Pelanggan`
-- `Pembayaran`
-- `BatchJastip`
+View berinteraksi langsung dengan pengguna.
 
-Model juga berisi atribut, constructor, getter, setter, method perhitungan, validasi, serta aturan perubahan status.
+Controller mengatur proses yang diminta pengguna.
 
-### View
+Model menangani object dan aturan data.
 
-Package `View` digunakan untuk mengatur interaksi dengan pengguna.
+DAO menangani komunikasi dengan database.
+
+Database menjadi tempat penyimpanan data secara permanen.
+
+Pembagian tersebut penting karena ketika proses database berubah, bagian View tidak harus ikut berubah. Begitu juga ketika tampilan program diubah, query database tidak perlu ditempatkan ulang pada View.
+
+---
+
+# 🧠 6. Penerapan Konsep PBO
+
+## 6.1 Encapsulation
+
+Encapsulation diterapkan dengan menyembunyikan atribut class menggunakan access modifier `private`.
 
 Contohnya:
-
-- `MenuView` menampilkan menu utama.
-- `PesananView` menangani tampilan yang berkaitan dengan pesanan.
-- `BatchView` menangani tampilan batch.
-- `ValidasiInput` menangani validasi input pengguna.
-
-### Controller
-
-`PesananController` menjadi penghubung antara View, Model, dan DAO.
-
-Controller menerima proses dari View, menjalankan aturan pada Model, kemudian menggunakan DAO untuk menyimpan atau mengambil data dari database.
-
----
-
-## 7. Encapsulation
-
-Encapsulation diterapkan dengan membuat atribut pada class menggunakan access modifier `private`.
-
-Contohnya pada `Pelanggan`:
 
 ```java
 private String idPelanggan;
@@ -154,9 +198,9 @@ private String namaPelanggan;
 private String nomorTelepon;
 ```
 
-Data tersebut tidak dapat diakses secara langsung dari luar class. Untuk mengakses atau mengubah data digunakan getter dan setter.
+Atribut tersebut tidak diakses secara langsung dari luar class. Pengaksesan data dilakukan melalui getter dan setter.
 
-Contohnya:
+Contoh:
 
 ```java
 public String getNamaPelanggan() {
@@ -168,24 +212,23 @@ public void setNamaPelanggan(String namaPelanggan) {
 }
 ```
 
-### Alasan penggunaan
+### Mengapa digunakan?
 
-Encapsulation digunakan agar data pada objek tidak dapat diubah secara sembarangan dari luar class.
+Encapsulation digunakan agar data dalam object tidak dapat diubah secara sembarangan dari luar class.
 
-### Manfaat
+### Manfaatnya dalam sistem
 
-- Data lebih terlindungi.
-- Perubahan nilai dapat dikontrol melalui method.
-- Struktur class menjadi lebih rapi.
-- Program lebih mudah dikembangkan.
+Dengan encapsulation, setiap perubahan terhadap data dapat dikontrol melalui method yang disediakan oleh class.
+
+Hal ini membuat object lebih aman dan struktur program menjadi lebih teratur.
 
 ---
 
-## 8. Inheritance
+## 6.2 Inheritance
 
-Inheritance diterapkan pada class jenis pesanan.
+Inheritance digunakan pada jenis pesanan.
 
-Class:
+Strukturnya:
 
 ```text
 PesananJastip
@@ -194,79 +237,60 @@ PesananJastip
 └── JastipElektronik
 ```
 
-`PesananJastip` menjadi parent class, sedangkan ketiga jenis jasa titip menjadi subclass.
+`PesananJastip` menjadi parent class yang menyimpan informasi dan perilaku umum sebuah pesanan.
 
-Dengan inheritance, atribut dan method umum yang dimiliki semua jenis pesanan dapat digunakan kembali oleh subclass.
+Kemudian setiap subclass memiliki detail yang lebih spesifik.
 
-### Alasan penggunaan
+Contohnya:
 
-Setiap jenis jasa titip memiliki data umum yang sama, tetapi juga mempunyai detail khusus yang berbeda.
+- Fashion memiliki ukuran dan warna.
+- Skincare memiliki jenis kulit dan ukuran produk.
+- Elektronik memiliki merek dan informasi garansi.
 
-Dengan inheritance, bagian yang sama tidak perlu dibuat berulang pada setiap class.
+### Mengapa digunakan?
 
-### Manfaat
+Ketiga jenis pesanan tersebut sama-sama merupakan pesanan jasa titip, tetapi memiliki karakteristik yang berbeda.
 
-- Mengurangi duplikasi kode.
-- Mempermudah pengembangan jenis pesanan baru.
-- Membentuk hubungan antar-class yang lebih jelas.
+Inheritance membuat bagian yang sama cukup dibuat pada parent class dan dapat digunakan kembali oleh subclass.
+
+### Manfaatnya dalam sistem
+
+- Mengurangi pengulangan kode.
+- Memudahkan pengembangan jenis pesanan baru.
+- Membuat hubungan antar-object lebih jelas.
 - Mendukung penerapan polymorphism.
 
 ---
 
-## 9. Abstraction
+# 🎭 7. Abstraction
 
-Abstraction diterapkan melalui class `PesananJastip` yang memiliki method abstrak:
+Abstraction diterapkan melalui `PesananJastip` yang merupakan abstract class.
+
+Salah satu method abstrak yang digunakan adalah:
 
 ```java
 public abstract String getJenisPesanan();
 ```
 
-Class tersebut tidak menentukan secara langsung jenis pesanan yang digunakan.
+Method tersebut tidak menentukan hasil secara langsung pada parent class.
 
-Implementasinya diberikan oleh subclass seperti:
+Implementasinya ditentukan oleh subclass.
 
-```java
-JastipFashion
-JastipSkincare
-JastipElektronik
-```
+Dengan demikian, `PesananJastip` hanya menentukan bahwa setiap jenis pesanan harus memiliki informasi mengenai jenis pesanan tersebut, sedangkan detail implementasinya diserahkan kepada subclass.
 
-Setiap subclass dapat memberikan hasil sesuai jenis pesanan masing-masing.
+### Insight dari penerapan abstraction
 
-### Alasan penggunaan
+Dari konsep ini dapat dipahami bahwa tidak semua detail harus diketahui oleh bagian program yang menggunakan object.
 
-Tidak semua detail implementasi perlu ditentukan pada parent class. Parent class hanya menentukan aturan umum yang harus dimiliki oleh subclass.
-
-### Manfaat
-
-- Membuat struktur program lebih jelas.
-- Memaksa subclass memiliki implementasi tertentu.
-- Mempermudah penambahan jenis pesanan baru.
-- Mengurangi ketergantungan pada implementasi tertentu.
+Program cukup mengetahui bahwa object tersebut merupakan `PesananJastip`, sementara detail jenisnya ditentukan oleh subclass yang digunakan.
 
 ---
 
-## 10. Polymorphism
+# 🔄 8. Polymorphism
 
-Polymorphism diterapkan melalui overriding dan penggunaan referensi parent class untuk objek subclass.
+Polymorphism diterapkan ketika object dari subclass dapat digunakan melalui referensi parent class.
 
-Contohnya, objek:
-
-```java
-JastipFashion
-JastipSkincare
-JastipElektronik
-```
-
-dapat diperlakukan sebagai objek:
-
-```java
-PesananJastip
-```
-
-Method `getJenisPesanan()` kemudian menghasilkan perilaku yang berbeda sesuai objek sebenarnya.
-
-### Contoh konsep
+Contohnya:
 
 ```java
 PesananJastip pesanan;
@@ -274,15 +298,21 @@ PesananJastip pesanan;
 pesanan = new JastipFashion();
 ```
 
-Ketika method jenis pesanan dipanggil, implementasi dari `JastipFashion` yang digunakan.
+Referensi tersebut tetap bertipe `PesananJastip`, tetapi object sebenarnya adalah `JastipFashion`.
+
+Ketika method yang dioverride dipanggil, implementasi milik subclass yang digunakan.
+
+Hal tersebut membuat program dapat menangani berbagai jenis pesanan melalui struktur yang sama.
 
 ### Manfaat
 
-Polymorphism membuat sistem lebih fleksibel karena Controller maupun bagian lain dapat bekerja menggunakan tipe `PesananJastip` tanpa harus selalu bergantung pada subclass tertentu.
+Polymorphism membuat Controller dan bagian lain dari sistem tidak harus membuat logika yang sepenuhnya berbeda untuk setiap jenis pesanan.
+
+Program cukup bekerja berdasarkan perilaku umum `PesananJastip`, sedangkan detailnya disesuaikan oleh masing-masing subclass.
 
 ---
 
-## 11. Interface `BisaDivalidasi`
+# 🔌 9. Interface `BisaDivalidasi`
 
 Project juga menggunakan interface:
 
@@ -292,234 +322,133 @@ public interface BisaDivalidasi {
 }
 ```
 
-Interface tersebut digunakan untuk menentukan bahwa jenis pesanan tertentu memiliki kemampuan untuk melakukan validasi detail pesanan.
+Interface tersebut digunakan untuk mendefinisikan kemampuan validasi detail pesanan.
 
-Interface diimplementasikan sesuai kebutuhan masing-masing subclass.
+Setiap jenis pesanan dapat memiliki cara validasi yang berbeda.
 
----
+Contohnya:
 
-## 12. Validasi Jastip Fashion
+### Jastip Fashion
 
-`JastipFashion` memiliki detail khusus berupa:
+Memvalidasi:
 
 - Ukuran.
 - Warna.
 
-Validasi dilakukan melalui method:
+### Jastip Skincare
 
-```java
-validasiDetailPesanan()
-```
-
-Validasi ini memastikan detail yang diperlukan untuk pesanan fashion tersedia sebelum pesanan diproses.
-
----
-
-## 13. Validasi Jastip Skincare
-
-`JastipSkincare` memiliki detail khusus berupa:
+Memvalidasi:
 
 - Jenis kulit.
 - Ukuran produk.
 
-Detail tersebut digunakan untuk menyesuaikan informasi produk skincare yang dipesan.
+### Jastip Elektronik
 
----
-
-## 14. Validasi Jastip Elektronik
-
-`JastipElektronik` memiliki detail khusus berupa:
+Memvalidasi:
 
 - Merek.
 - Garansi.
 
-Informasi tersebut digunakan karena barang elektronik membutuhkan informasi tambahan yang berbeda dari fashion maupun skincare.
+Penggunaan interface menunjukkan bahwa class yang berbeda dapat memiliki kemampuan yang sama tanpa harus mempunyai implementasi yang sama.
 
 ---
 
-## 15. Penggunaan Interface
+# 📦 10. Pembagian Tanggung Jawab Class
 
-Interface `BisaDivalidasi` membantu membuat aturan validasi yang dapat digunakan oleh berbagai jenis pesanan.
+## `PesananJastip`
 
-Konsep ini membuat setiap jenis pesanan dapat mempunyai mekanisme validasi sendiri tanpa menghilangkan struktur umum pada sistem.
+Menjadi dasar dari seluruh jenis pesanan.
 
----
+Class ini menangani hal-hal umum seperti:
 
-## 16. Class `Barang`
-
-Class `Barang` digunakan untuk menyimpan informasi barang yang dititipkan.
-
-Atribut utama:
-
-- `idBarang`
-- `namaBarang`
-- `negaraAsal`
-- `harga`
-- `berat`
-
-Class ini kemudian dipetakan ke tabel:
-
-```text
-barang
-```
-
-pada database.
-
----
-
-## 17. Class `Pelanggan`
-
-Class `Pelanggan` digunakan untuk menyimpan data pelanggan.
-
-Atribut:
-
-- `idPelanggan`
-- `namaPelanggan`
-- `nomorTelepon`
-
-Class ini dipetakan ke tabel:
-
-```text
-pelanggan
-```
-
----
-
-## 18. Class `Pembayaran`
-
-Class `Pembayaran` digunakan untuk menyimpan informasi metode pembayaran.
-
-Atribut:
-
-- `idPembayaran`
-- `metodePembayaran`
-
-Class ini dipetakan ke tabel:
-
-```text
-pembayaran
-```
-
----
-
-## 19. Class `BatchJastip`
-
-`BatchJastip` digunakan untuk mengelompokkan proses jasa titip berdasarkan perjalanan atau periode tertentu.
-
-Atribut yang digunakan:
-
-- `idBatch`
-- `negaraTujuan`
-- `tanggalBuka`
-- `batasOrder`
-- `tanggalBerangkat`
-- `statusBatch`
-
-Class ini dipetakan ke tabel:
-
-```text
-batch_jastip
-```
-
----
-
-## 20. Status Pesanan
-
-Pesanan memiliki status untuk menunjukkan kondisi pesanan.
-
-Status digunakan untuk membantu sistem mengetahui proses pesanan dari awal sampai tahap berikutnya.
-
-Perubahan status dilakukan melalui method yang sudah disediakan pada `PesananJastip` sehingga status tidak dapat diubah secara sembarangan.
-
----
-
-## 21. Riwayat Status
-
-Sistem juga menyediakan tabel:
-
-```text
-riwayat_status
-```
-
-Tabel tersebut digunakan untuk menyimpan perubahan status pesanan.
-
-Contohnya:
-
-```text
-Menunggu Pembayaran
-        ↓
-Pembayaran Berhasil
-```
-
-Dengan adanya riwayat status, perubahan kondisi pesanan dapat dicatat sehingga informasi proses pesanan lebih mudah ditelusuri.
-
----
-
-## 22. Perhitungan Total Pesanan
-
-`PesananJastip` memiliki proses perhitungan total biaya berdasarkan:
-
-- Harga barang.
+- Identitas pesanan.
+- Informasi pelanggan.
+- Informasi barang.
 - Jumlah barang.
-- Biaya jasa titip.
-
-Perhitungan dilakukan melalui method pada Model sehingga aturan perhitungan tidak ditempatkan langsung pada View.
-
-Hal ini membuat tanggung jawab program menjadi lebih terpisah dan mudah dikelola.
-
----
-
-## 23. Estimasi Biaya Jasa Titip
-
-Sistem juga menyediakan perhitungan atau estimasi biaya jasa titip berdasarkan jenis pesanan.
-
-Dengan demikian, setiap jenis pesanan dapat memiliki aturan biaya yang sesuai dengan kebutuhan sistem.
-
-Perhitungan tersebut ditempatkan pada bagian Model agar aturan bisnis tidak bercampur dengan tampilan program.
+- Status pesanan.
+- Riwayat status.
+- Perhitungan total.
+- Request khusus.
+- Informasi jenis pesanan.
 
 ---
 
-## 24. Validasi Input
+## `JastipFashion`
 
-Validasi input dilakukan melalui class:
+Menangani detail khusus pesanan fashion seperti:
 
-```text
-View/ValidasiInput.java
-```
-
-Validasi digunakan untuk memastikan input pengguna sesuai dengan tipe data dan aturan yang dibutuhkan.
-
-Contohnya:
-
-- Input angka harus berupa angka.
-- Input jumlah tidak boleh sembarangan.
-- Input tertentu dapat dibatalkan menggunakan pilihan `0`.
-
-Penggunaan validasi membantu mencegah error ketika pengguna memasukkan data yang tidak sesuai.
+- Ukuran.
+- Warna.
 
 ---
 
-## 25. Pemisahan Barang dan Pesanan
+## `JastipSkincare`
 
-Data barang dan data pesanan dibuat dalam class yang berbeda.
+Menangani detail khusus pesanan skincare seperti:
 
-`Barang` berfokus pada informasi barang, sedangkan `PesananJastip` berfokus pada proses pemesanan.
-
-Pemisahan ini membuat setiap class memiliki tanggung jawab yang lebih spesifik.
+- Jenis kulit.
+- Ukuran produk.
 
 ---
 
-# 26. Database
+## `JastipElektronik`
 
-Database yang digunakan dalam project ini adalah:
+Menangani detail khusus pesanan elektronik seperti:
+
+- Merek.
+- Garansi.
+
+---
+
+## `Barang`
+
+Menyimpan informasi barang:
+
+- ID barang.
+- Nama barang.
+- Negara asal.
+- Harga.
+- Berat.
+
+---
+
+## `Pelanggan`
+
+Menyimpan informasi pelanggan:
+
+- ID pelanggan.
+- Nama pelanggan.
+- Nomor telepon.
+
+---
+
+## `Pembayaran`
+
+Menyimpan informasi metode pembayaran.
+
+---
+
+## `BatchJastip`
+
+Menyimpan informasi batch jasa titip seperti:
+
+- Negara tujuan.
+- Tanggal buka.
+- Batas order.
+- Tanggal berangkat.
+- Status batch.
+
+---
+
+# 🗄️ 11. Perancangan Database
+
+Database yang digunakan adalah:
 
 ```text
 sistem_jastip
 ```
 
-Database dibuat menggunakan MySQL.
-
-Tabel yang digunakan:
+Database terdiri dari:
 
 ```text
 pelanggan
@@ -533,81 +462,92 @@ detail_elektronik
 riwayat_status
 ```
 
+Struktur database dibuat untuk memisahkan data berdasarkan tanggung jawabnya.
+
+Contohnya, data pelanggan tidak disimpan langsung sebagai kumpulan informasi di tabel `pesanan`. Tabel `pesanan` cukup menyimpan hubungan dengan pelanggan melalui `id_pelanggan`.
+
+Pendekatan tersebut membuat data lebih terstruktur dan mengurangi pengulangan data.
+
 ---
 
-## 27. File SQL
+# 🔗 12. Relasi Antar Data
 
-File database disimpan di:
+Tabel `pesanan` menjadi salah satu tabel utama karena berhubungan dengan beberapa data lainnya.
+
+Pesanan memiliki hubungan dengan:
+
+- `pelanggan`
+- `barang`
+- `pembayaran`
+- `batch_jastip`
+
+Sedangkan detail pesanan dipisahkan ke dalam:
+
+- `detail_fashion`
+- `detail_skincare`
+- `detail_elektronik`
+
+Riwayat perubahan status disimpan pada:
+
+- `riwayat_status`
+
+Pemisahan ini menyesuaikan struktur object pada program sehingga data umum dan data khusus dapat dikelola dengan lebih jelas.
+
+---
+
+# 📝 13. File SQL dan Dummy Data
+
+File database berada pada:
 
 ```text
 database/sistem_jastip.sql
 ```
 
-File tersebut berisi:
+File tersebut digunakan untuk:
 
-- Pembuatan database.
-- Pembuatan tabel.
-- Primary key.
-- Foreign key.
-- Dummy data awal.
+- Membuat database.
+- Membuat tabel.
+- Membuat primary key.
+- Membuat foreign key.
+- Memasukkan dummy data.
 
-File `.sql` disertakan dalam repository agar database dapat dibuat kembali tanpa harus memasukkan seluruh data secara manual.
+Dummy data dimasukkan langsung melalui SQL, bukan melalui kode Java.
 
----
-
-## 28. Dummy Data
-
-Mini Project 4 memiliki dummy data awal yang dimasukkan melalui file SQL.
-
-Contoh data pelanggan:
+Contoh data awal:
 
 ```text
 P001 - Alya Putri
 P002 - Raka Pratama
-```
 
-Contoh barang:
-
-```text
 Dress Korea
 Skincare Serum
-```
 
-Contoh pesanan:
-
-```text
 PJ001
 PJ002
 ```
 
-Dummy data digunakan agar ketika fitur Read dijalankan, data langsung dapat ditampilkan dari database.
+### Mengapa dummy data diperlukan?
 
-Data awal tersebut tidak dibuat melalui kode Java, tetapi dimasukkan melalui file:
+Ketentuan Mini Project 4 mengharuskan data awal tersedia agar fitur Read dapat langsung menampilkan data ketika program dijalankan.
 
-```text
-sistem_jastip.sql
-```
-
-Hal ini sesuai dengan ketentuan Mini Project 4.
+Hal tersebut juga mempermudah proses pengujian karena tidak perlu memasukkan data secara manual terlebih dahulu.
 
 ---
 
-# 29. JDBC
+# 🔌 14. Integrasi JDBC
 
-JDBC digunakan sebagai pendekatan utama untuk menghubungkan program Java dengan database MySQL.
+JDBC menjadi bagian utama integrasi database pada project.
 
 JDBC digunakan untuk:
 
-- Membuka koneksi database.
+- Membuka koneksi.
 - Menjalankan query.
-- Membaca data.
+- Mengambil data.
 - Menambahkan data.
 - Mengubah data.
 - Menghapus data.
 
-Library MySQL Connector digunakan melalui Maven.
-
-Dependency yang digunakan:
+Dependency MySQL Connector yang digunakan:
 
 ```xml
 <dependency>
@@ -619,48 +559,11 @@ Dependency yang digunakan:
 
 ---
 
-## 30. DatabaseConnection
+# 🔐 15. PreparedStatement
 
-Class:
+Project menggunakan `PreparedStatement` ketika menjalankan query database.
 
-```text
-Config/DatabaseConnection.java
-```
-
-digunakan untuk membuat koneksi antara aplikasi Java dengan database MySQL.
-
-Konfigurasi database meliputi:
-
-```java
-private static final String URL =
-        "jdbc:mysql://localhost:3306/sistem_jastip";
-
-private static final String USER = "root";
-
-private static final String PASSWORD = "";
-```
-
-Koneksi dibuat menggunakan:
-
-```java
-DriverManager.getConnection(
-    URL,
-    USER,
-    PASSWORD
-);
-```
-
-Pemisahan konfigurasi koneksi ke dalam satu class membuat proses koneksi lebih mudah dikelola.
-
----
-
-# 31. PreparedStatement
-
-Akses database pada DAO menggunakan `PreparedStatement`.
-
-PreparedStatement digunakan untuk menjalankan query dengan parameter.
-
-Contoh konsep:
+Contohnya:
 
 ```java
 String sql = "DELETE FROM pesanan WHERE id_pesanan = ?";
@@ -672,33 +575,28 @@ ps.setString(1, idPesanan);
 ps.executeUpdate();
 ```
 
-Parameter tidak langsung digabungkan ke dalam query.
+PreparedStatement digunakan karena query dan data yang dimasukkan sebagai parameter dapat dipisahkan.
 
-### Alasan penggunaan
+### Apa yang dipahami dari penerapannya?
 
-PreparedStatement dipilih karena:
+Sebelumnya query SQL dapat terlihat sebagai sekadar perintah untuk mengambil atau mengubah data.
 
-- Query lebih terstruktur.
-- Parameter lebih mudah dikelola.
-- Mengurangi risiko SQL Injection.
-- Sesuai dengan ketentuan Mini Project 4.
+Setelah menerapkan PreparedStatement, dapat dipahami bahwa cara query dijalankan juga penting, terutama ketika query menerima input dari pengguna.
 
 ---
 
-# 32. DAO
+# 🧱 16. DAO — Data Access Object
 
-DAO merupakan singkatan dari **Data Access Object**.
+DAO digunakan sebagai lapisan yang bertanggung jawab terhadap akses database.
 
-DAO digunakan untuk memisahkan proses akses database dari Controller dan Model.
-
-Project menggunakan:
+Project memiliki:
 
 ```text
 PesananDAO.java
 PesananDAOImpl.java
 ```
 
-`PesananDAO` berisi kontrak operasi database.
+`PesananDAO` mendefinisikan operasi yang dapat dilakukan.
 
 Contohnya:
 
@@ -717,130 +615,71 @@ boolean ubahStatusPesanan(
 );
 ```
 
----
-
-# 33. Implementasi DAO
-
-`PesananDAOImpl` menjadi implementasi dari `PesananDAO`.
-
-Class ini bertanggung jawab melakukan operasi database seperti:
-
-- SELECT.
-- INSERT.
-- UPDATE.
-- DELETE.
-
-Query database dijalankan menggunakan JDBC dan PreparedStatement.
-
-Dengan pola ini, Controller tidak perlu menuliskan query SQL secara langsung.
+Sedangkan `PesananDAOImpl` berisi implementasi sebenarnya menggunakan JDBC.
 
 ---
 
-# 34. CRUD
+# 🔄 17. CRUD
 
-CRUD merupakan singkatan dari:
+CRUD yang diterapkan:
 
-- **Create** — menambahkan data.
-- **Read** — membaca data.
-- **Update** — mengubah data.
-- **Delete** — menghapus data.
+| Operasi | Implementasi |
+|---|---|
+| **Create** | Menambahkan pesanan |
+| **Read** | Menampilkan pesanan |
+| **Update** | Mengubah data/status |
+| **Delete** | Menghapus pesanan |
 
-Pada sistem ini:
-
-### Create
-
-Data pesanan baru dimasukkan ke database.
-
-### Read
-
-Data pesanan dibaca dari database menggunakan query SELECT.
-
-### Update
-
-Data pesanan dapat diperbarui menggunakan query UPDATE.
-
-### Delete
-
-Pesanan dapat dihapus menggunakan query DELETE.
-
-CRUD menjadi bagian utama pengembangan Mini Project 4 karena data program sudah tidak hanya tersimpan selama program berjalan, tetapi juga tersimpan secara permanen di database.
+CRUD membuat sistem tidak hanya dapat menampilkan data, tetapi juga dapat mengelola perubahan data secara langsung pada database.
 
 ---
 
-# 35. Controller dan DAO
+# 🎮 18. Peran Controller
 
-Controller bertugas mengatur proses sistem, sedangkan DAO bertugas mengakses database.
+`PesananController` menjadi penghubung antara tampilan, object, dan DAO.
 
-Alur sederhananya:
+Controller tidak menangani query SQL secara langsung.
+
+Sebagai contoh, ketika pengguna meminta data pesanan:
 
 ```text
+User
+↓
 View
-  ↓
+↓
 Controller
-  ↓
+↓
 DAO
-  ↓
+↓
 Database
 ```
 
-Ketika data dibaca:
+Controller cukup meminta DAO mengambil data.
 
-```text
-Database
-  ↓
-DAO
-  ↓
-Controller
-  ↓
-View
-```
-
-Pemisahan ini membuat program lebih terstruktur karena masing-masing bagian memiliki tanggung jawab yang berbeda.
+Dengan pemisahan tersebut, kode menjadi lebih mudah dipahami karena setiap class mempunyai tanggung jawab yang berbeda.
 
 ---
 
-# 36. Integrasi JDBC dengan Program
+# 🚀 19. Hibernate ORM — Nilai Tambah
 
-Integrasi JDBC dilakukan dengan mempertahankan Model dan Controller dari Mini Project 3 kemudian menambahkan DAO dan koneksi database.
+Selain JDBC, project menerapkan **Hibernate ORM** sebagai nilai tambah.
 
-Dengan pendekatan ini, pengembangan Mini Project 4 tidak membuat ulang seluruh program dari awal.
+ORM atau **Object Relational Mapping** merupakan pendekatan yang menghubungkan object pada program dengan tabel dalam database.
 
-Struktur program yang sudah ada tetap digunakan, kemudian ditambahkan bagian:
-
-```text
-Config
-DAO
-Database
-```
-
-untuk mendukung penyimpanan data secara permanen.
-
----
-
-# 37. Hibernate ORM — Nilai Tambah
-
-Selain JDBC, project ini juga menerapkan **Hibernate ORM** sebagai nilai tambah.
-
-Hibernate ORM digunakan untuk menghubungkan object Java dengan tabel database.
-
-ORM merupakan singkatan dari:
-
-> Object Relational Mapping
-
-Konsep ini memungkinkan class Java dipetakan ke tabel database menggunakan annotation seperti:
+Pada project ini beberapa class Model diberikan annotation Hibernate seperti:
 
 ```java
 @Entity
 @Table(name = "pelanggan")
 ```
 
-Dengan ORM, developer tidak selalu harus menuliskan query SQL secara manual untuk operasi tertentu.
+Dengan annotation tersebut, Hibernate dapat mengetahui bahwa class `Pelanggan` berhubungan dengan tabel `pelanggan`.
 
 ---
 
-# 38. Dependency Hibernate
+# ⚙️ 20. Dependency Hibernate
 
-Hibernate ditambahkan ke `pom.xml` menggunakan dependency:
+Hibernate ditambahkan melalui Maven:
 
 ```xml
 <dependency>
@@ -850,28 +689,15 @@ Hibernate ditambahkan ke `pom.xml` menggunakan dependency:
 </dependency>
 ```
 
-Hibernate digunakan sebagai teknologi tambahan dan tidak menggantikan JDBC yang sudah menjadi ketentuan utama.
-
-Dengan demikian, project memiliki dua pendekatan:
-
-```text
-JDBC  → ketentuan utama
-Hibernate ORM → nilai tambah
-```
+Hibernate digunakan sebagai **nilai tambah**, sehingga JDBC tetap digunakan sebagai pendekatan utama sesuai ketentuan Mini Project 4.
 
 ---
 
-# 39. HibernateUtil
+# 🛠️ 21. HibernateUtil
 
-Class:
+`HibernateUtil` digunakan untuk membangun `SessionFactory`.
 
-```text
-Config/HibernateUtil.java
-```
-
-digunakan untuk membuat dan mengatur `SessionFactory`.
-
-HibernateUtil mendaftarkan entity yang digunakan:
+Entity yang didaftarkan:
 
 ```java
 configuration.addAnnotatedClass(Pelanggan.class);
@@ -880,33 +706,29 @@ configuration.addAnnotatedClass(Pembayaran.class);
 configuration.addAnnotatedClass(BatchJastip.class);
 ```
 
-Konfigurasi database juga dilakukan pada class ini.
-
-Hibernate diarahkan ke database:
+Hibernate dikonfigurasi agar terhubung dengan database:
 
 ```text
 sistem_jastip
 ```
 
-serta menggunakan:
+dan menggunakan:
 
 ```text
 com.mysql.cj.jdbc.Driver
 ```
 
-Hibernate juga dikonfigurasi dengan:
+Konfigurasi:
 
 ```text
 hibernate.hbm2ddl.auto = none
 ```
 
-sehingga Hibernate tidak membuat atau mengubah struktur tabel database yang sudah dibuat melalui file SQL.
+digunakan agar Hibernate tidak membuat atau mengubah struktur tabel yang sudah dibuat melalui file SQL.
 
 ---
 
-# 40. Entity Hibernate
-
-Beberapa class Model digunakan sebagai entity Hibernate.
+# 🏷️ 22. Entity Mapping
 
 Entity yang digunakan:
 
@@ -917,7 +739,7 @@ Pembayaran
 BatchJastip
 ```
 
-Contoh mapping:
+Contoh:
 
 ```java
 @Entity
@@ -927,396 +749,393 @@ public class Pelanggan {
 }
 ```
 
-Annotation tersebut memberitahu Hibernate bahwa class `Pelanggan` dipetakan ke tabel `pelanggan`.
-
----
-
-# 41. Mapping Primary Key
-
-Primary key pada entity ditandai menggunakan:
+Primary key ditandai dengan:
 
 ```java
 @Id
 ```
 
-Contohnya:
+Sedangkan mapping nama kolom menggunakan:
 
 ```java
-@Id
-@Column(name = "id_pelanggan")
-private String idPelanggan;
+@Column(name = "nama_pelanggan")
 ```
 
-Untuk kolom yang menggunakan auto increment seperti `id_barang`, digunakan:
-
-```java
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-```
-
-Contohnya:
-
-```java
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id_barang")
-private int idBarang;
-```
+Dengan mapping tersebut, Hibernate dapat mengetahui hubungan antara property object Java dengan kolom tabel database.
 
 ---
 
-# 42. Constructor Kosong Hibernate
+# 🔎 23. Hibernate DAO
 
-Entity yang digunakan Hibernate memiliki constructor kosong.
-
-Contohnya:
-
-```java
-public Pelanggan() {
-}
-```
-
-Constructor kosong diperlukan agar Hibernate dapat membuat instance object ketika mengambil data dari database.
-
-Constructor dengan parameter tetap digunakan untuk kebutuhan pembuatan object secara normal pada program.
-
----
-
-# 43. PelangganHibernateDAO
-
-DAO khusus Hibernate dibuat pada:
+Project memiliki:
 
 ```text
 DAO/PelangganHibernateDAO.java
 ```
 
-Class ini digunakan untuk mengambil data pelanggan menggunakan Hibernate.
+DAO tersebut digunakan untuk mengambil data pelanggan melalui Hibernate.
+
+Contoh query:
+
+```java
+session.createQuery(
+    "FROM Pelanggan",
+    Pelanggan.class
+).getResultList();
+```
+
+Query tersebut menggunakan nama entity `Pelanggan`.
+
+Hal ini menunjukkan perbedaan antara JDBC dan Hibernate.
+
+Pada JDBC, query SQL ditulis berdasarkan tabel database.
+
+Pada Hibernate, query dapat ditulis berdasarkan entity yang digunakan oleh program.
+
+---
+
+# ⚖️ 24. JDBC vs Hibernate
+
+| JDBC | Hibernate |
+|---|---|
+| Menggunakan SQL secara langsung | Menggunakan object/entity |
+| Menggunakan `PreparedStatement` | Menggunakan `Session` dan Query |
+| Kontrol query lebih langsung | Mapping object lebih terstruktur |
+| Harus mengatur hasil query secara manual | Hibernate membantu proses mapping |
+| Menjadi ketentuan utama | Menjadi nilai tambah |
+
+Penggunaan keduanya memberikan pengalaman yang berbeda.
+
+JDBC membantu memahami bagaimana aplikasi berkomunikasi langsung dengan database, sedangkan Hibernate memperkenalkan cara menghubungkan object Java dengan database menggunakan ORM.
+
+---
+
+# 📸 25. Dokumentasi Program
+
+Bagian dokumentasi digunakan untuk menunjukkan hasil implementasi program secara langsung.
+
+> **Catatan:** Simpan seluruh screenshot pada folder `docs/` atau `screenshots/`, kemudian sesuaikan nama file pada bagian berikut dengan screenshot yang sudah diambil.
+
+---
+
+## 📌 25.1 Struktur Project
+
+Menampilkan struktur package dan class pada project Mini Project 4.
+
+```markdown
+![Struktur Project](docs/01-struktur-project.png)
+```
+
+**Keterangan:**  
+Screenshot ini menunjukkan pembagian package `Model`, `View`, `Controller`, `DAO`, `Config`, dan `Main` yang digunakan dalam project.
+
+---
+
+## 📌 25.2 Menu Utama
+
+```markdown
+![Menu Utama](docs/02-menu-utama.png)
+```
+
+**Keterangan:**  
+Menampilkan menu utama yang digunakan sebagai pusat navigasi pengguna dalam sistem.
+
+---
+
+## 📌 25.3 Data Dummy Saat Read
+
+```markdown
+![Data Dummy](docs/03-read-data.png)
+```
+
+**Keterangan:**  
+Menampilkan data awal yang berasal dari database. Data dapat langsung ditampilkan ketika program dijalankan karena dummy data telah dimasukkan melalui file SQL.
+
+---
+
+## 📌 25.4 Tambah Pesanan
+
+```markdown
+![Tambah Pesanan](docs/04-tambah-pesanan.png)
+```
+
+**Keterangan:**  
+Menampilkan proses penambahan pesanan baru melalui program. Data yang dimasukkan kemudian diproses oleh Controller dan DAO sebelum disimpan ke database.
+
+---
+
+## 📌 25.5 Ubah Pesanan
+
+```markdown
+![Ubah Pesanan](docs/05-ubah-pesanan.png)
+```
+
+**Keterangan:**  
+Menampilkan proses perubahan data pesanan yang sudah tersimpan.
+
+---
+
+## 📌 25.6 Hapus Pesanan
+
+```markdown
+![Hapus Pesanan](docs/06-hapus-pesanan.png)
+```
+
+**Keterangan:**  
+Menampilkan proses penghapusan data pesanan dari sistem dan database.
+
+---
+
+## 📌 25.7 Perubahan Status
+
+```markdown
+![Ubah Status](docs/07-ubah-status.png)
+```
+
+**Keterangan:**  
+Menampilkan proses perubahan status pesanan yang digunakan untuk menunjukkan perkembangan pesanan.
+
+---
+
+## 📌 25.8 Struk atau Ringkasan Pesanan
+
+```markdown
+![Struk Pesanan](docs/08-struk-pesanan.png)
+```
+
+**Keterangan:**  
+Menampilkan hasil informasi pesanan setelah data berhasil diproses oleh sistem.
+
+---
+
+## 📌 25.9 Database MySQL
+
+```markdown
+![Database MySQL](docs/09-database.png)
+```
+
+**Keterangan:**  
+Menampilkan database `sistem_jastip` beserta tabel yang digunakan dalam sistem.
+
+---
+
+## 📌 25.10 Dummy Data pada Database
+
+```markdown
+![Dummy Data](docs/10-dummy-data.png)
+```
+
+**Keterangan:**  
+Menampilkan data awal yang dimasukkan melalui file `sistem_jastip.sql`.
+
+---
+
+## 📌 25.11 Implementasi Hibernate
+
+```markdown
+![Hibernate ORM](docs/11-hibernate.png)
+```
+
+**Keterangan:**  
+Menampilkan bagian project yang menerapkan Hibernate ORM, seperti entity, konfigurasi Hibernate, atau proses pengambilan data menggunakan Hibernate.
+
+---
+
+# 🧪 26. Hasil Implementasi
+
+Setelah seluruh bagian dikembangkan, program telah berhasil:
+
+- Terhubung dengan database MySQL.
+- Membaca dummy data dari database.
+- Menambahkan data pesanan.
+- Mengubah data pesanan.
+- Menghapus data pesanan.
+- Mengubah status pesanan.
+- Menyimpan perubahan data ke database.
+- Menggunakan PreparedStatement.
+- Menggunakan DAO.
+- Mempertahankan konsep PBO dari Mini Project 3.
+- Menerapkan Hibernate ORM sebagai nilai tambah.
+
+Hal yang penting dari hasil tersebut adalah data tidak lagi hanya bergantung pada object yang berada di memory selama program berjalan.
+
+Ketika program dihentikan, data yang sudah tersimpan di database tetap dapat digunakan kembali pada saat program dijalankan berikutnya.
+
+---
+
+# 💡 27. Insight dan Pembelajaran
+
+## 27.1 Dari Program Berbasis Object ke Program Terintegrasi Database
+
+Salah satu perubahan terbesar pada Mini Project 4 adalah cara melihat data.
+
+Pada program sebelumnya, object merupakan pusat pengelolaan data selama program berjalan.
+
+Setelah database diterapkan, data memiliki tempat penyimpanan permanen.
+
+Dari sini dipahami bahwa sebuah aplikasi tidak cukup hanya memiliki object dan method. Aplikasi juga membutuhkan mekanisme untuk menjaga data agar tetap tersedia ketika program ditutup.
+
+---
+
+## 27.2 Memahami Mengapa DAO Dibutuhkan
+
+Sebelum menggunakan DAO, proses akses database dapat dengan mudah tercampur dengan logika program.
+
+Setelah menggunakan DAO, tanggung jawab tersebut dapat dipisahkan.
+
+Controller tidak perlu mengetahui detail:
+
+- bagaimana koneksi dibuat;
+- bagaimana query ditulis;
+- bagaimana PreparedStatement digunakan;
+- bagaimana hasil query diproses.
+
+Controller cukup meminta DAO melakukan operasi yang dibutuhkan.
+
+Hal ini memberikan pemahaman bahwa **pemisahan tanggung jawab bukan hanya untuk membuat kode terlihat rapi, tetapi juga untuk membuat program lebih mudah dikembangkan dan diperbaiki.**
+
+---
+
+## 27.3 Memahami Peran PreparedStatement
+
+Penerapan PreparedStatement memberikan pemahaman bahwa keamanan dan struktur query juga menjadi bagian penting dalam pengembangan aplikasi.
+
+Input pengguna tidak langsung ditempelkan ke query SQL.
+
+Parameter diberikan melalui method seperti:
+
+```java
+ps.setString(...)
+ps.setInt(...)
+```
+
+Dari sini dapat dipahami bahwa akses database perlu dirancang dengan memperhatikan bagaimana data pengguna diproses sebelum dikirim ke database.
+
+---
+
+## 27.4 Memahami Hubungan PBO dengan Database
+
+Pada awalnya konsep PBO seperti inheritance, abstraction, dan polymorphism dapat terlihat hanya sebagai konsep untuk membuat class.
+
+Setelah project diintegrasikan dengan database, konsep tersebut menjadi lebih terasa manfaatnya.
+
+Object pada Java dapat merepresentasikan data dalam sistem, sedangkan database menyimpan data tersebut secara permanen.
+
+Dengan demikian, Model pada program tidak berdiri sendiri, tetapi menjadi bagian dari sistem yang lebih besar.
+
+---
+
+## 27.5 Memahami Perbedaan JDBC dan ORM
+
+Penerapan JDBC dan Hibernate memberikan pengalaman bahwa satu kebutuhan dapat memiliki pendekatan teknis yang berbeda.
+
+JDBC memberikan kontrol yang lebih langsung terhadap SQL.
+
+Hibernate memberikan pendekatan melalui object dan entity.
+
+Dari sini dapat dipahami bahwa penggunaan teknologi tidak hanya tentang memilih mana yang lebih mudah, tetapi juga memahami **kapan dan mengapa suatu pendekatan digunakan**.
+
+Dalam project ini JDBC tetap dipertahankan karena merupakan ketentuan utama, sedangkan Hibernate digunakan sebagai nilai tambah untuk memperluas pemahaman mengenai ORM.
+
+---
+
+## 27.6 Memahami Pentingnya Mapping
+
+Ketika menggunakan Hibernate, class Java harus diberi informasi mengenai tabel dan kolom yang sesuai.
 
 Contohnya:
 
 ```java
-public List<Pelanggan> getAllPelanggan() {
-
-    try (Session session =
-            HibernateUtil.getSessionFactory().openSession()) {
-
-        return session
-                .createQuery(
-                        "FROM Pelanggan",
-                        Pelanggan.class
-                )
-                .getResultList();
-
-    } catch (Exception e) {
-
-        System.out.println(
-                "Gagal mengambil data pelanggan menggunakan Hibernate: "
-                + e.getMessage()
-        );
-
-        return List.of();
-    }
-}
+@Entity
+@Table(name = "pelanggan")
 ```
 
-Query:
+dan:
 
-```text
-FROM Pelanggan
+```java
+@Column(name = "nama_pelanggan")
 ```
 
-merupakan HQL atau Hibernate Query Language.
+Dari proses tersebut dapat dipahami bahwa object Java dan tabel database sebenarnya memiliki struktur yang berbeda.
 
-Query tersebut menggunakan nama entity Java, bukan nama tabel SQL secara langsung.
+ORM membantu menjembatani dua struktur tersebut agar dapat bekerja bersama.
 
 ---
 
-# 44. Alasan Menggunakan Hibernate ORM
+## 27.7 Memahami Pentingnya Struktur Program
 
-Hibernate digunakan sebagai nilai tambah karena dapat menunjukkan bahwa program tidak hanya memahami JDBC, tetapi juga memahami konsep ORM.
+Dengan semakin banyaknya fitur, program akan menjadi sulit dikelola jika seluruh proses ditulis dalam satu class.
 
-Pada JDBC, developer berinteraksi dengan database menggunakan SQL dan PreparedStatement.
-
-Pada Hibernate, object Java dapat dipetakan ke tabel database menggunakan annotation.
-
-Perbandingan pendekatannya:
-
-| JDBC | Hibernate ORM |
-|---|---|
-| Menggunakan SQL secara langsung | Menggunakan entity dan HQL |
-| PreparedStatement | Session dan Query |
-| Developer mengatur mapping secara manual | Mapping menggunakan annotation |
-| Cocok untuk memahami SQL dan kontrol query | Membantu mengurangi kode akses database |
-
----
-
-# 45. Implementasi ORM pada Project
-
-ORM diterapkan pada package:
+Pembagian:
 
 ```text
 Model
+View
+Controller
+DAO
 Config
-DAO
 ```
 
-Bagian yang digunakan:
+membantu membuat tanggung jawab setiap bagian menjadi lebih jelas.
 
-```text
-Model/Pelanggan.java
-Model/Barang.java
-Model/Pembayaran.java
-Model/BatchJastip.java
+Insight yang diperoleh adalah bahwa **struktur program menjadi semakin penting ketika ukuran dan kompleksitas sistem bertambah.**
 
-Config/HibernateUtil.java
+---
 
-DAO/PelangganHibernateDAO.java
+## 27.8 Memahami Database sebagai Bagian dari Sistem
+
+Database bukan hanya tempat untuk menyimpan data.
+
+Database juga menjadi bagian dari alur kerja aplikasi.
+
+Program harus memahami:
+
+- bagaimana data dibuat;
+- bagaimana data diambil;
+- bagaimana data diubah;
+- bagaimana data dihapus;
+- bagaimana hubungan antar data dijaga;
+- bagaimana object Java berhubungan dengan data tersebut.
+
+Hal tersebut membuat pengembangan Mini Project 4 memberikan pemahaman yang lebih luas dibandingkan hanya membuat program Java tanpa database.
+
+---
+
+# 🌱 28. Pengembangan yang Dapat Dilanjutkan
+
+Project masih dapat dikembangkan lebih lanjut, misalnya:
+
+- Menambahkan autentikasi pengguna.
+- Menambahkan role admin dan pelanggan.
+- Menambahkan pencarian pesanan.
+- Menambahkan filter berdasarkan status.
+- Mengembangkan pengelolaan batch secara lebih lengkap.
+- Menggunakan relasi entity Hibernate secara lebih mendalam.
+- Mengembangkan fitur laporan.
+- Menambahkan GUI.
+- Menambahkan validasi database yang lebih lengkap.
+
+Pengembangan tersebut dapat dilakukan tanpa harus mengubah keseluruhan sistem karena struktur program sudah dipisahkan berdasarkan tanggung jawabnya.
+
+---
+
+# 🏁 29. Kesimpulan
+
+Mini Project 4 berhasil mengembangkan **Sistem Jasa Titip Luar Negeri** dari program berbasis object menjadi program yang telah terintegrasi dengan database MySQL.
+
+Pengembangan dilakukan menggunakan **JDBC, PreparedStatement, DAO, dan CRUD**, sementara dummy data disediakan melalui file SQL sesuai dengan ketentuan project.
+
+Konsep PBO dari Mini Project 3 tetap dipertahankan, yaitu:
+
+- Encapsulation.
+- Inheritance.
+- Abstraction.
+- Polymorphism.
+- Interface.
+
+Sebagai nilai tambah, project juga menerapkan **Hibernate ORM** melalui entity, `HibernateUtil`, dan DAO berbasis Hibernate.
+
+Hal utama yang diperoleh dari project ini bukan hanya kemampuan menghubungkan Java dengan database, tetapi juga pemahaman mengenai bagaimana **struktur program, konsep PBO, database, dan pola akses data dapat bekerja sebagai satu kesatuan dalam sebuah aplikasi**.
+
+Dengan adanya pemisahan antara Model, View, Controller, DAO, dan Config, sistem menjadi lebih terstruktur dan memiliki dasar yang lebih baik untuk dikembangkan pada tahap berikutnya.
 ```
-
-Dengan demikian, lokasi penerapan nilai tambah ORM dapat dilihat secara jelas pada struktur project.
-
----
-
-# 46. JDBC Tetap Dipertahankan
-
-Walaupun Hibernate ORM diterapkan sebagai nilai tambah, JDBC tetap digunakan sebagai teknologi utama untuk memenuhi ketentuan Mini Project 4.
-
-Jadi project tidak mengganti JDBC dengan Hibernate.
-
-Strukturnya:
-
-```text
-JDBC
-├── DatabaseConnection
-├── PesananDAO
-└── PesananDAOImpl
-
-Hibernate ORM
-├── HibernateUtil
-├── Entity
-└── PelangganHibernateDAO
-```
-
-Pendekatan tersebut menunjukkan bahwa project dapat menggunakan dua pendekatan akses database tanpa menghilangkan ketentuan utama.
-
----
-
-# 47. Alur Pengelolaan Pesanan
-
-Proses utama pengelolaan pesanan pada program:
-
-- Pengguna memilih menu pada View.
-- View menerima input pengguna.
-- Controller menerima proses dari View.
-- Controller memproses object Model.
-- DAO menjalankan operasi database menggunakan JDBC.
-- Database menyimpan atau mengembalikan data.
-- Controller memperbarui data pada program.
-- View menampilkan hasil kepada pengguna.
-
-Untuk proses Read:
-
-```text
-User
-↓
-View
-↓
-Controller
-↓
-PesananDAO
-↓
-PesananDAOImpl
-↓
-MySQL
-↓
-Data Pesanan
-↓
-View
-```
-
----
-
-# 48. Pengujian Program
-
-Pengujian dilakukan untuk memastikan program dapat berkomunikasi dengan database dan menjalankan fitur CRUD.
-
-Pengujian mencakup:
-
-- Menjalankan program.
-- Menampilkan dummy data.
-- Menambahkan pesanan.
-- Mengubah data pesanan.
-- Menghapus pesanan.
-- Mengubah status pesanan.
-- Memastikan data tersimpan pada database.
-- Memastikan data dari database dapat ditampilkan kembali.
-
----
-
-# 49. Pengujian Read
-
-Ketika program pertama kali dijalankan, data dummy dari database dapat ditampilkan tanpa harus memasukkan data baru terlebih dahulu.
-
-Hal tersebut membuktikan bahwa:
-
-```text
-File SQL
-↓
-Database MySQL
-↓
-JDBC
-↓
-DAO
-↓
-Controller
-↓
-View
-```
-
-sudah terhubung dengan baik.
-
----
-
-# 50. Dokumentasi Menu Program
-
-Menu utama program menyediakan beberapa pilihan pengelolaan sistem, seperti:
-
-```text
-1. Tambah Pesanan
-2. Lihat Pesanan
-3. Ubah Pesanan
-4. Hapus Pesanan
-5. Cetak Struk
-6. Ubah Status
-7. Ringkasan
-8. Kelola Batch
-9. Keluar
-```
-
-Menu digunakan sebagai pusat interaksi pengguna dengan sistem.
-
----
-
-# 51. Class dan Tanggung Jawab
-
-| Class | Tanggung Jawab |
-|---|---|
-| `PesananJastip` | Menyimpan aturan umum pesanan |
-| `JastipFashion` | Menangani pesanan fashion |
-| `JastipSkincare` | Menangani pesanan skincare |
-| `JastipElektronik` | Menangani pesanan elektronik |
-| `Barang` | Menyimpan data barang |
-| `Pelanggan` | Menyimpan data pelanggan |
-| `Pembayaran` | Menyimpan data pembayaran |
-| `BatchJastip` | Mengatur batch jasa titip |
-| `PesananController` | Mengatur alur proses sistem |
-| `PesananDAO` | Menentukan operasi akses data |
-| `PesananDAOImpl` | Implementasi akses database JDBC |
-| `DatabaseConnection` | Mengatur koneksi JDBC |
-| `HibernateUtil` | Mengatur SessionFactory Hibernate |
-| `PelangganHibernateDAO` | Akses data pelanggan menggunakan Hibernate |
-| `MenuView` | Menampilkan menu utama |
-| `PesananView` | Menampilkan proses pesanan |
-| `BatchView` | Menampilkan proses batch |
-| `ValidasiInput` | Validasi input pengguna |
-
----
-
-# 52. Konsep PBO yang Diterapkan
-
-Project ini menerapkan beberapa konsep utama PBO:
-
-- **Encapsulation**
-  - Atribut menggunakan `private`.
-  - Akses data melalui getter dan setter.
-
-- **Inheritance**
-  - `JastipFashion`, `JastipSkincare`, dan `JastipElektronik` mewarisi `PesananJastip`.
-
-- **Abstraction**
-  - `PesananJastip` merupakan abstract class.
-  - Method `getJenisPesanan()` dibuat abstract.
-
-- **Polymorphism**
-  - Subclass memberikan implementasi berbeda terhadap method parent.
-
-- **Interface**
-  - `BisaDivalidasi` digunakan untuk mendefinisikan kemampuan validasi.
-
-- **Constructor**
-  - Digunakan untuk membuat object dengan data awal.
-
-- **Access Modifier**
-  - Digunakan untuk mengatur hak akses atribut dan method.
-
----
-
-# 53. Konsep Database yang Diterapkan
-
-Project juga menerapkan konsep database:
-
-- Primary Key.
-- Foreign Key.
-- Relasi antar tabel.
-- Auto Increment.
-- CRUD.
-- PreparedStatement.
-- DAO.
-- Dummy Data.
-- Database Connection.
-- ORM menggunakan Hibernate.
-
----
-
-# 54. Nilai Tambah Project
-
-Nilai tambah pada project ini adalah penerapan:
-
-```text
-Hibernate ORM
-```
-
-Penerapan ORM dilakukan dengan:
-
-- Menambahkan dependency Hibernate.
-- Membuat `HibernateUtil`.
-- Memberikan annotation `@Entity`.
-- Memberikan annotation `@Table`.
-- Menentukan primary key menggunakan `@Id`.
-- Melakukan mapping kolom menggunakan `@Column`.
-- Membuat constructor kosong untuk entity.
-- Membuat DAO menggunakan Hibernate.
-- Mengambil data menggunakan HQL.
-
----
-
-# 55. Insight yang Didapat
-
-Melalui pengembangan Mini Project 4, diperoleh beberapa pemahaman baru.
-
-Pertama, integrasi database membuat program menjadi lebih nyata karena data tidak hanya tersimpan selama aplikasi berjalan. Data dapat disimpan di database dan digunakan kembali ketika program dijalankan.
-
-Kedua, penggunaan DAO membantu memahami pentingnya pemisahan tanggung jawab. Controller tidak perlu mengetahui detail query SQL karena proses tersebut ditangani oleh DAO.
-
-Ketiga, PreparedStatement menunjukkan bahwa query database sebaiknya dibuat dengan parameter agar lebih aman dan lebih mudah dikelola.
-
-Keempat, penggunaan dummy data melalui file SQL membuat proses pengujian lebih praktis karena program dapat langsung membaca data ketika dijalankan.
-
-Kelima, Hibernate ORM memberikan pemahaman mengenai cara object Java dapat dipetakan ke tabel database. Dengan ORM, hubungan antara class pada program dan tabel database dapat dibuat melalui annotation.
-
-Terakhir, penggunaan JDBC dan Hibernate secara bersamaan memberikan pemahaman mengenai dua pendekatan akses database yang berbeda. JDBC memberikan kontrol yang lebih langsung terhadap SQL, sedangkan Hibernate membantu melakukan pemetaan object dan database.
-
----
-
-# 56. Kesimpulan
-
-Mini Project 4 merupakan pengembangan dari Sistem Jasa Titip Luar Negeri pada Mini Project 3 dengan menambahkan integrasi database menggunakan JDBC, PreparedStatement, dan DAO.
-
-Program telah menggunakan database MySQL untuk menyimpan data pelanggan, barang, pembayaran, batch, pesanan, detail jenis pesanan, dan riwayat status.
-
-Penerapan DAO membuat akses database menjadi lebih terorganisir, sedangkan PreparedStatement digunakan untuk menjalankan query dengan parameter.
-
-Selain ketentuan utama tersebut, project juga menerapkan Hibernate ORM sebagai nilai tambah. Hibernate digunakan untuk melakukan mapping beberapa class Java menjadi entity yang terhubung dengan tabel database.
-
-Dengan pengembangan ini, sistem tidak hanya menerapkan konsep dasar PBO seperti encapsulation, inheritance, abstraction, polymorphism, dan interface, tetapi juga menunjukkan bagaimana konsep tersebut dapat diterapkan pada aplikasi yang terintegrasi dengan database.
-
-Project ini memberikan pemahaman bahwa pengembangan aplikasi tidak hanya berfokus pada pembuatan class dan method, tetapi juga pada bagaimana data dikelola, disimpan, diakses, dan dihubungkan dengan struktur program secara terorganisir.
