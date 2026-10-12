@@ -269,7 +269,7 @@ Pendekatan ini membuat data lebih terstruktur dan mengurangi pengulangan data ya
 
 ---
 
-# 🧪 Dummy Data
+# 📄 Dummy Data
 
 Sesuai ketentuan Mini Project 4, database harus memiliki data awal sehingga fitur **Read** dapat langsung menampilkan data ketika program dijalankan.
 
@@ -378,7 +378,7 @@ Pemisahan ini membuat kode lebih terstruktur dan memudahkan pemeliharaan karena 
 
 ---
 
-# 🔄 Penerapan CRUD
+# 📥 Penerapan CRUD
 
 JDBC dan DAO digunakan untuk mendukung operasi CRUD pada data pesanan.
 
@@ -515,7 +515,7 @@ Menampilkan kondisi database setelah proses CRUD dilakukan untuk memastikan peru
 
 ---
 
-# 🧩 Penerapan Nilai Tambah — Hibernate ORM
+# ✨ Penerapan Nilai Tambah - Hibernate ORM
 
 Sebagai nilai tambah, project ini mengimplementasikan **Hibernate ORM**.
 
@@ -679,7 +679,7 @@ Penerapan ini menjadi contoh bagaimana ORM dapat menyederhanakan proses akses da
 
 ---
 
-# 📁 Lokasi Penerapan Konsep
+# 🗺️ Lokasi Penerapan Konsep
 
 | Konsep | Lokasi |
 |---|---|
@@ -700,7 +700,7 @@ Penerapan ini menjadi contoh bagaimana ORM dapat menyederhanakan proses akses da
 
 ---
 
-# 📌 File Database
+# 🗂️ File Database
 
 File database disediakan dalam repository pada:
 
@@ -721,7 +721,7 @@ File SQL disertakan agar database dapat dibuat kembali dengan struktur dan data 
 
 ---
 
-# 📦 Dependency Project
+# 🔗 Dependency Project
 
 Project menggunakan Maven untuk mengelola dependency.
 
@@ -751,7 +751,7 @@ Dependency tersebut digunakan untuk menerapkan Hibernate sebagai nilai tambah OR
 
 ---
 
-# ✅ Kesimpulan
+# 📑 Kesimpulan
 
 Mini Project 4 mengembangkan **Sistem Jasa Titip Luar Negeri** menjadi aplikasi Java yang telah terintegrasi dengan database MySQL.
 
