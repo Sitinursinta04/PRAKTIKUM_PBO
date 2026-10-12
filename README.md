@@ -503,6 +503,14 @@ Menampilkan data pesanan yang berasal dari database. Data dapat langsung muncul 
   </tr>
 </table>
 
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Dokumentasi/kedua/Screenshot%202026-10-13%20004622.png" width="100%">
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 3. Menambahkan Pesanan
