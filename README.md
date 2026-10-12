@@ -42,44 +42,14 @@ Pengembangan Mini Project 4 dilakukan untuk:
 
 # 🧩 Struktur Package
 
-```text
-SistemJastip_Minpro4
-│
-├── Controller
-│   └── PesananController.java
-│
-├── Model
-│   ├── PesananJastip.java
-│   ├── JastipFashion.java
-│   ├── JastipSkincare.java
-│   ├── JastipElektronik.java
-│   ├── Barang.java
-│   ├── Pelanggan.java
-│   ├── Pembayaran.java
-│   └── BatchJastip.java
-│
-├── View
-│   ├── MenuView.java
-│   ├── PesananView.java
-│   ├── BatchView.java
-│   └── ValidasiInput.java
-│
-├── DAO
-│   ├── PesananDAO.java
-│   ├── PesananDAOImpl.java
-│   └── PelangganHibernateDAO.java
-│
-├── Config
-│   ├── DatabaseConnection.java
-│   └── HibernateUtil.java
-│
-├── Main
-│   └── SistemJastip_Minpro4.java
-│
-├── database
-│   └── sistem_jastip.sql
-│
-└── pom.xml
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
+
 ```
 
 Struktur package dipisahkan berdasarkan tanggung jawabnya agar kode lebih terorganisir. `Model` menangani representasi data dan konsep OOP, `View` menangani interaksi dengan pengguna, `Controller` mengatur jalannya proses, sedangkan `DAO` menangani akses data ke database.
@@ -132,6 +102,13 @@ public void setNamaPelanggan(String namaPelanggan) {
     this.namaPelanggan = namaPelanggan;
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Encapsulation digunakan agar data object lebih terkontrol dan tidak dapat diubah secara sembarangan dari luar class. Selain menjaga data, penerapan ini juga membuat tanggung jawab setiap class menjadi lebih jelas, misalnya data pelanggan dikelola oleh `Pelanggan`, sedangkan data barang dikelola oleh `Barang`.
 
@@ -148,6 +125,13 @@ public abstract class PesananJastip {
     ...
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Class tersebut kemudian memiliki beberapa class turunan:
 
@@ -188,6 +172,13 @@ public String getJenisPesanan() {
     return "Jastip Fashion";
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Class turunan lainnya juga memberikan implementasi terhadap method yang sama sesuai jenis pesanan masing-masing.
 
@@ -302,6 +293,13 @@ Koneksi database terdapat pada:
 ```text
 Config/DatabaseConnection.java
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Contoh konfigurasi:
 
@@ -313,12 +311,26 @@ private static final String USER = "root";
 
 private static final String PASSWORD = "";
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Koneksi dibuat menggunakan:
 
 ```java
 DriverManager.getConnection(URL, USER, PASSWORD);
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 JDBC digunakan sebagai mekanisme utama akses database karena merupakan bagian wajib dalam Mini Project 4. Melalui JDBC, aplikasi dapat berkomunikasi langsung dengan MySQL untuk mengambil maupun mengubah data.
 
@@ -339,6 +351,13 @@ ps.setString(1, idPesanan);
 
 ps.executeUpdate();
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Penggunaan parameter `?` membuat nilai data diberikan secara terpisah dari perintah SQL.
 
@@ -365,6 +384,13 @@ boolean ubahPesanan(PesananJastip pesanan)
 boolean hapusPesanan(String idPesanan)
 boolean ubahStatusPesanan(String idPesanan, String statusBaru)
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Implementasinya terdapat pada:
 
@@ -455,7 +481,13 @@ Bagian ini berisi screenshot hasil program setelah seluruh fitur dijalankan. Dok
 
 Menampilkan menu utama sistem setelah program berhasil dijalankan.
 
-![Menu Utama](docs/output/menu-utama.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -463,7 +495,13 @@ Menampilkan menu utama sistem setelah program berhasil dijalankan.
 
 Menampilkan data pesanan yang berasal dari database. Data dapat langsung muncul karena sebelumnya telah tersedia dummy data pada file `sistem_jastip.sql`.
 
-![Data Pesanan](docs/output/data-pesanan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -471,7 +509,13 @@ Menampilkan data pesanan yang berasal dari database. Data dapat langsung muncul 
 
 Menampilkan proses ketika pengguna menambahkan data pesanan baru melalui program.
 
-![Tambah Pesanan](docs/output/tambah-pesanan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -479,7 +523,13 @@ Menampilkan proses ketika pengguna menambahkan data pesanan baru melalui program
 
 Menampilkan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
 
-![Edit Pesanan](docs/output/edit-pesanan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -487,7 +537,13 @@ Menampilkan hasil perubahan data pesanan yang sebelumnya telah tersimpan.
 
 Menampilkan hasil penghapusan data pesanan berdasarkan ID.
 
-![Hapus Pesanan](docs/output/hapus-pesanan.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -495,7 +551,13 @@ Menampilkan hasil penghapusan data pesanan berdasarkan ID.
 
 Menampilkan proses perubahan status pesanan melalui sistem.
 
-![Update Status](docs/output/update-status.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -503,7 +565,13 @@ Menampilkan proses perubahan status pesanan melalui sistem.
 
 Menampilkan hasil penerapan Hibernate ORM, khususnya proses pengambilan data melalui `PelangganHibernateDAO`.
 
-![Hibernate ORM](docs/output/hibernate-orm.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -511,7 +579,13 @@ Menampilkan hasil penerapan Hibernate ORM, khususnya proses pengambilan data mel
 
 Menampilkan kondisi database setelah proses CRUD dilakukan untuk memastikan perubahan dari program tersimpan pada database.
 
-![Database](docs/output/database.png)
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -645,6 +719,13 @@ public class Pelanggan {
     private String nomorTelepon;
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Entity mapping digunakan agar Hibernate mengetahui hubungan antara object Java dengan tabel dan kolom database yang digunakan.
 
@@ -672,6 +753,13 @@ try (Session session =
             .getResultList();
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="" width="100%">
+    </td>
+  </tr>
+</table>
 
 Pada bagian ini, Hibernate digunakan untuk mengambil data `Pelanggan` menggunakan entity dan object Java tanpa menulis query SQL `SELECT` secara langsung.
 
