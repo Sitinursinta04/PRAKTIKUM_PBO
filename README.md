@@ -1,4 +1,4 @@
-# 🌌 Sistem Jasa Titip Luar Negeri — Mini Project 4
+# 📦🛍️ Sistem Jasa Titip Belanja Luar Negeri - Mini Project 4
 
 <p align="center">
   <b>Pengembangan Sistem Jasa Titip Berbasis Java, JDBC, DAO, dan Hibernate ORM</b>
@@ -88,7 +88,7 @@ Pemisahan tersebut digunakan agar setiap bagian program memiliki tanggung jawab 
 
 ---
 
-# 🔄 Alur Program
+# ⏩ Alur Program
 
 Alur sistem dimulai ketika program dijalankan melalui class `SistemJastip_Minpro4`. Program kemudian mempersiapkan koneksi database dan memuat data pesanan melalui `PesananController` dan `PesananDAOImpl`.
 
@@ -168,7 +168,7 @@ Inheritance digunakan agar atribut dan perilaku yang bersifat umum tidak perlu d
 
 ---
 
-# 🎭 Penerapan Polymorphism
+# 🗐 Penerapan Polymorphism
 
 **Polymorphism** memungkinkan object dari beberapa class yang berbeda diperlakukan melalui tipe induk yang sama.
 
@@ -197,7 +197,7 @@ Penerapan polymorphism membuat sistem lebih fleksibel karena jenis pesanan baru 
 
 ---
 
-# 🧱 Penerapan Abstraction
+# 🌌 Penerapan Abstraction
 
 **Abstraction** digunakan untuk menyederhanakan struktur program dengan hanya menampilkan bagian penting dan menyembunyikan detail implementasi yang tidak perlu diketahui oleh bagian lain.
 
@@ -766,6 +766,6 @@ Secara keseluruhan, project ini memberikan pemahaman mengenai hubungan antara **
 ---
 
 <p align="center">
-  <b>🌌 Mini Project 4 — Sistem Jasa Titip Luar Negeri</b><br>
+  <b>📦🛍️ Mini Project 4 - Sistem Jasa Titip Luar Negeri</b><br>
   <i>Java • JDBC • DAO • MySQL • Hibernate ORM</i>
 </p>
