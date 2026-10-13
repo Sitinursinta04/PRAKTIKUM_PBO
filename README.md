@@ -404,13 +404,14 @@ try (
 ) {
 
     statement.setString(
-            1,
-            idPesanan
+        1,
+        idPesanan
     );
 
     return statement.executeUpdate() > 0;
 }
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
@@ -450,6 +451,7 @@ boolean ubahPesanan(PesananJastip pesanan);
 boolean hapusPesanan(String idPesanan);
 boolean ubahStatusPesanan(String idPesanan, String statusBaru);
 ```
+
 <table border="1" bordercolor="black">
   <tr>
     <td>
