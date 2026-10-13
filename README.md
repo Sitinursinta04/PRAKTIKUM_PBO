@@ -411,6 +411,13 @@ try (
     return statement.executeUpdate() > 0;
 }
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/third/Screenshot%202026-10-13%20171314.png" width="100%">
+    </td>
+  </tr>
+</table>
 
 Penggunaan `?` membuat nilai parameter diberikan secara terpisah dari perintah SQL. Pada contoh tersebut, nilai `idPesanan` dimasukkan menggunakan:
 
@@ -443,6 +450,13 @@ boolean ubahPesanan(PesananJastip pesanan);
 boolean hapusPesanan(String idPesanan);
 boolean ubahStatusPesanan(String idPesanan, String statusBaru);
 ```
+<table border="1" bordercolor="black">
+  <tr>
+    <td>
+      <img src="https://github.com/Sitinursinta04/PRAKTIKUM_PBO/blob/main/Matkul/third/Screenshot%202026-10-13%20171411.png" width="100%">
+    </td>
+  </tr>
+</table>
 
 Implementasinya terdapat pada:
 
