@@ -599,8 +599,6 @@ Menampilkan proses dan hasil perubahan data pesanan yang sebelumnya telah tersim
   </tr>
 </table>
 
-Setelah proses perubahan berhasil, data pesanan yang tersimpan di dalam database juga mengalami perubahan sesuai dengan data yang diperbarui melalui program.
-
 <table border="1" bordercolor="black">
   <tr>
     <td>
