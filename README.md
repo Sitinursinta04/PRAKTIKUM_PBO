@@ -52,16 +52,36 @@ Pengembangan Mini Project 4 dilakukan untuk:
   </tr>
 </table>
 
-Struktur package dipisahkan berdasarkan tanggung jawab masing-masing bagian agar kode lebih mudah dipahami dan dikembangkan.
+Struktur package dipisahkan berdasarkan tanggung jawab masing-masing bagian agar kode lebih terorganisir, mudah dipahami, dan lebih mudah dikembangkan.
 
-- `Model` digunakan untuk merepresentasikan data serta menerapkan konsep OOP seperti encapsulation, inheritance, abstraction, polymorphism, dan interface.
-- `View` menangani interaksi dengan pengguna dan menampilkan informasi dari sistem.
-- `Controller` mengatur proses aplikasi dan menjadi penghubung antara View, Model, dan DAO.
-- `DAO` menangani proses akses dan perubahan data pada database.
-- `Config` digunakan untuk konfigurasi koneksi JDBC dan Hibernate.
+- `Model` digunakan untuk merepresentasikan data dan menerapkan konsep OOP seperti **encapsulation, inheritance, abstraction, polymorphism, dan interface**.
+- `View` menangani interaksi dengan pengguna serta menampilkan informasi yang dihasilkan oleh sistem.
+- `Controller` mengatur alur proses aplikasi dan menjadi penghubung antara `View`, `Model`, dan `DAO`.
+- `DAO` menangani proses akses, penyimpanan, perubahan, dan penghapusan data pada database.
+- `Config` digunakan untuk mengatur konfigurasi koneksi **JDBC** dan **Hibernate**.
 - `Main` menjadi titik awal ketika aplikasi dijalankan.
 
-Pemisahan tersebut digunakan agar setiap bagian program memiliki tanggung jawab yang jelas. Dengan demikian, perubahan pada proses database dapat dilakukan pada bagian DAO tanpa harus mengubah seluruh tampilan atau struktur Model.
+Pemisahan tersebut digunakan agar setiap bagian program memiliki tanggung jawab yang jelas. Dengan struktur ini, perubahan pada proses akses atau pengelolaan database dapat dilakukan pada bagian `DAO` tanpa harus mengubah seluruh tampilan atau struktur `Model`. Hal ini membuat kode menjadi lebih terstruktur dan lebih mudah dipelihara.
+
+### Dependencies
+
+Bagian `Dependencies` berisi library tambahan yang digunakan oleh project untuk mendukung koneksi database dan penerapan Hibernate ORM.
+
+- `hibernate-core-6.6.26.Final.jar` digunakan untuk menerapkan **Hibernate ORM** sebagai nilai tambah pada project.
+- `mysql-connector-j-9.4.0.jar` digunakan sebagai driver agar aplikasi Java dapat terhubung dengan **database MySQL** melalui JDBC.
+- `jakarta.persistence-api-3.1.0.jar` digunakan untuk mendukung kebutuhan **entity dan persistence** pada Hibernate.
+- `jakarta.transaction-api-2.1.1.jar` digunakan untuk mendukung kebutuhan transaksi yang digunakan oleh library persistence.
+- `protobuf-java-4.31.1.jar` merupakan library pendukung yang digunakan oleh dependency Hibernate.
+
+Dependencies tersebut digunakan karena project membutuhkan library tambahan di luar Java standar, terutama untuk koneksi MySQL dan penerapan Hibernate ORM.
+
+### Project Files
+
+Bagian `Project Files` berisi file konfigurasi utama project, yaitu `pom.xml`.
+
+File `pom.xml` digunakan untuk mengatur konfigurasi project Maven, termasuk dependency yang dibutuhkan oleh aplikasi. Dengan adanya file ini, library yang digunakan dalam project dapat dikelola secara terpusat sehingga konfigurasi project menjadi lebih terstruktur dan mudah dikelola.
+
+> **Catatan:** `Dependencies` dan `Project Files` bukan merupakan package utama yang dibuat untuk menyimpan logika program. Keduanya merupakan bagian pendukung project yang ditampilkan oleh NetBeans/Maven dan membantu project dalam mengelola library serta konfigurasi yang dibutuhkan.
 
 ---
 
